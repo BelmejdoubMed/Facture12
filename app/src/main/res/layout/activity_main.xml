@@ -1,18 +1,155 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16sp"
+    android:scrollbarSize="25sp"
     tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<!-- Bill Title -->
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:padding="16dp"
+        android:text="Bill Details"
+        android:textSize="24sp" />
+<!-- Bill number -->
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/bill_nbr_label"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="16dp"
+        android:text="Number:"
+        android:textSize="18sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+    android:id="@+id/bill_nbr"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:textSize="18sp"
+    android:padding="16dp" />
+<!-- Date -->
+    <TextView
+        android:id="@+id/date_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Date:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/date_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp" />
+
+<!-- Client -->
+    <TextView
+        android:id="@+id/client_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Client:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/client_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+<!-- ICE -->
+<TextView
+    android:id="@+id/ice_label"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="ICE:"
+    android:textSize="18sp"
+    android:padding="16dp" />
+
+<EditText
+    android:id="@+id/ice_edittext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:textSize="18sp"
+    android:padding="16dp" />
+
+<!-- Products -->
+<TextView
+    android:id="@+id/products_label"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Products:"
+    android:textSize="18sp"
+    android:padding="16dp" />
+
+<EditText
+    android:id="@+id/products_edittext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:textSize="18sp"
+    android:padding="16dp" />
+
+<!-- Price -->
+<TextView
+    android:id="@+id/price_label"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Price:"
+    android:textSize="18sp"
+    android:padding="16dp" />
+
+<EditText
+    android:id="@+id/price_edittext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="numberDecimal"
+    android:textSize="18sp"
+    android:padding="16dp" />
+
+<!-- Quantity -->
+<TextView
+    android:id="@+id/quantity_label"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Quantity:"
+    android:textSize="18sp"
+    android:padding="16dp"/>
+<EditText
+    android:id="@+id/quantityEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:textSize="18sp"
+    android:padding="16dp" />
+<TextView
+    android:id="@+id/mBillTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Quantity:"
+    android:textSize="18sp"
+    android:padding="16dp"/>
+
+<Button
+    android:id="@+id/save_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/date_label"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="32dp"
+    android:text="Save"
+    android:onClick="clicked"
+    android:textSize="18sp" />
+</LinearLayout>
+</ScrollView>
